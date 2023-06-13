@@ -17,7 +17,7 @@ void setup() {
 
 void loop() {
   float distance = SRF.getCentimeter();
-  Serial.print(String(distance));
+  Serial.println(String(int(distance)));
 
   if (distance < limit && distance > limit / 2) {
     tone(buzzer, 330, 500);
